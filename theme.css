@@ -1,0 +1,110 @@
+/*
+ * Bauhaus — Primaries on cream.
+ *
+ * The complete token set. Every rule in design.css reads from these names,
+ * so this file is the whole visual identity: change a value here and the
+ * entire gallery follows.
+ *
+ * The second block below holds derived accessibility values. Each one is
+ * the designer's colour pushed toward the opposite end of the ramp until it
+ * clears its WCAG minimum against every surface it can land on -- page,
+ * sheet, and the tinted fills of badges and diff lines. They are generated
+ * and checked, not hand-picked; see build/verify.py in the design tooling.
+ */
+
+[data-theme="bauhaus"] {
+  --paper: #f2e9d8;
+  --paper-2: #e7dcc6;
+  --sheet: #faf4e8;
+  --ink: #1a1a1a;
+  --ink-2: #4a4741;
+  --ink-3: #7a756b;
+  --rule: #cfc4ac;
+  --signal: #e03a2f;
+  --signal-soft: #f3bdb4;
+  --signal-hover: #c02a20;
+  --ink-hover: #000000;
+  --add: #2e7d4f;
+  --del: #c0392b;
+  --board: #1a1a1a;
+  --board-deep: #111111;
+  --board-2: #2a2a2a;
+  --board-rule: #3d3d3d;
+  --board-text: #f2e9d8;
+  --board-dim: #a29c8e;
+  --ok-board: #7fd39b;
+  --err-board: #ff9b8a;
+  --code-str: #ffd479;
+  --code-add-bg: color-mix(in srgb, #3fbf7f 18%, transparent);
+  --code-add-fg: #7fe0ac;
+  --code-del-bg: color-mix(in srgb, #e05a5a 16%, transparent);
+  --code-del-fg: #ff9c9c;
+  --code-del-text: #c9a3a3;
+  --line-openai: #1f4fd8;
+  --line-anthropic: #e03a2f;
+  --line-google: #2e7d4f;
+  --line-mistral: #7a3fd4;
+  --line-deepseek: #f2b300;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.01em;
+  --display-tracking-lg: -0.015em;
+  --display-tracking-tight: -0.02em;
+  --display-transform: uppercase;
+  --btn-weight: 700;
+  --btn-tracking: 0.06em;
+  --btn-transform: uppercase;
+  --r-sm: 0;
+  --r-md: 0;
+  --r-lg: 0;
+  --r-pill: 0;
+  --bw: 3px;
+  --rule-w: 2px;
+  --bw-heavy: 4px;
+  --rule-style: solid;
+  --shadow-card: 8px 8px 0 var(--accent-2);
+  --shadow-btn: 3px 3px 0 var(--ink);
+  --shadow-btn-hover: 1px 1px 0 var(--ink);
+  --shadow-panel: none;
+  --btn-hover-transform: translate(2px, 2px);
+  --panel-blur: none;
+  --section-y: clamp(64px, 9vw, 116px);
+  --size-base: 1.0625rem;
+  --texture: none;
+  --texture-size: auto;
+  --texture-position: 0 0;
+  --texture-repeat: repeat;
+  --texture-attachment: scroll;
+  --accent-2: #1f4fd8;
+  --accent-3: #f2b300;
+
+  /* Derived for contrast; see the note above. */
+  --add-text: #2a7349;
+  --board-add-text: #7fe0ac;
+  --board-code-text: #ffd479;
+  --board-del-text: #c9a3a3;
+  --board-dim-text: #a29c8e;
+  --board-key-text: #ffd479;
+  --del-text: #b73629;
+  --focus-ring: #e03a2f;
+  --ink-3-text: #666159;
+  --on-ink-muted: #a29c8e;
+  --on-signal: #0a0a0a;
+  --signal-soft-text: #0a0a0a;
+  --signal-text: #bc3127;
+
+  color-scheme: light;
+}
+
+/* ---------- Identity rules that are not tokens ---------- */
+[data-theme="bauhaus"] .chart span:nth-child(3n + 1) {
+  background: var(--accent-2);
+}
+[data-theme="bauhaus"] .chart span:nth-child(3n + 2) {
+  background: var(--accent-3);
+}
+[data-theme="bauhaus"] .topbar {
+  border-bottom: 6px solid var(--accent-2);
+}
